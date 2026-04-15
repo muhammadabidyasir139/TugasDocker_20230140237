@@ -1,3 +1,7 @@
+![login sazza](https://github.com/user-attachments/assets/3bd9a8a2-a974-41d3-a33a-40ad4e113351)
+![setelah pull sazzad](https://github.com/user-attachments/assets/6cc5b23c-8f9c-4374-842d-dfdbf9ee31ee)
+![form sazzaf](https://github.com/user-attachments/assets/12068ddb-02d7-4f90-999c-3aad75fb8537)
+![home sazzad](https://github.com/user-attachments/assets/2068cf6a-10cc-46ad-9a0a-d3c83ab49dbb)
 ![add data](https://github.com/user-attachments/assets/5ee06827-bc79-4fa4-9557-a60f4fa4af25)
 ![halaman form](https://github.com/user-attachments/assets/1ff57e66-1c5f-45db-a675-f437345f0923)
 ![halaman dashbord](https://github.com/user-attachments/assets/2969aae8-787f-473c-90b1-5831a75461b8)
