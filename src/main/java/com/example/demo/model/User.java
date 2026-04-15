@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+//form untuk menyimpdan data secara temporary
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
