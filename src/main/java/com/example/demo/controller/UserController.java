@@ -34,7 +34,7 @@ public class UserController {
     }
 
     // ===================== HOME =====================
-
+//menuju ke halmaan home
     @GetMapping("/home")
     public String showHome(HttpSession session, Model model) {
         if (session.getAttribute("loggedIn") == null) {
