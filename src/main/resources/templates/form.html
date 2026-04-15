@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Input - MY Website</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background: #f0f2f5; padding: 20px; }
+        .container { background: white; padding: 20px; max-width: 500px; margin: 0 auto; border: 1px solid #ccc; }
+        h2 { font-size: 15px; margin-bottom: 16px; }
+        label { display: block; margin-bottom: 4px; font-size: 13px; }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 14px;
+            border: 1px solid #ccc;
+            font-size: 13px;
+        }
+        .radio-group { margin-bottom: 14px; }
+        .radio-group label { margin-bottom: 6px; }
+        .radio-group div { font-size: 13px; margin-bottom: 4px; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            cursor: pointer;
+            font-size: 13px;
+            margin-right: 10px;
+        }
+        button:hover { background: #0056b3; }
+        a { color: #007bff; font-size: 13px; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Form Input Mahasiswa</h2>
+    <form th:action="@{/form}" method="post" th:object="${user}">
+        <label>Nama:</label>
+        <input type="text" th:field="*{nama}" placeholder="Masukkan nama" required/>
+
+        <label>NIM:</label>
+        <input type="text" th:field="*{nim}" placeholder="Masukkan NIM" required/>
+
+        <div class="radio-group">
+            <label>Jenis Kelamin:</label>
+            <div>
+                <input type="radio" th:field="*{jenisKelamin}" value="Laki-laki"/> Laki-laki
+            </div>
+            <div>
+                <input type="radio" th:field="*{jenisKelamin}" value="Perempuan"/> Perempuan
+            </div>
+        </div>
+
+        <button type="submit">Submit</button>
+        <a th:href="@{/home}">Kembali ke Home</a>
+    </form>
+</div>
+</body>
+</html>

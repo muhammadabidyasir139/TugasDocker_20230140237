@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - MY Website</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background: #f0f2f5; padding: 20px; }
+        .container { background: white; padding: 20px; max-width: 800px; margin: 0 auto; border: 1px solid #ccc; }
+        h2 { font-size: 16px; margin-bottom: 6px; }
+        p { font-size: 13px; margin-bottom: 10px; }
+        a { color: #007bff; text-decoration: none; font-size: 13px; }
+        a:hover { text-decoration: underline; }
+        h3 { font-size: 14px; margin: 16px 0 8px; }
+        table { width: 100%; border-collapse: collapse; }
+        thead tr { background: #007bff; color: white; }
+        th, td { padding: 8px 12px; text-align: center; border: 1px solid #ccc; font-size: 13px; }
+        tbody tr:nth-child(even) { background: #f9f9f9; }
+        .no-data { text-align: center; padding: 12px; font-size: 13px; color: #666; }
+        .logout { margin-top: 16px; display: block; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Ganti NIM di bawah ini dengan NIM kamu sendiri -->
+    <h2>MY Website 20230140237</h2>
+    <p>Selamat datang di aplikasi!</p>
+    <a th:href="@{/form}">+ Input Data Mahasiswa</a>
+
+    <h3>Data Mahasiswa</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Jenis Kelamin</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${#lists.isEmpty(users)}">
+            <td colspan="4" class="no-data">Belum ada data</td>
+        </tr>
+        <tr th:each="user, stat : ${users}">
+            <td th:text="${stat.index + 1}"></td>
+            <td th:text="${user.nama}"></td>
+            <td th:text="${user.nim}"></td>
+            <td th:text="${user.jenisKelamin}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a class="logout" th:href="@{/logout}">Logout</a>
+</div>
+</body>
+</html>
